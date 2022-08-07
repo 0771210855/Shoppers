@@ -1,0 +1,74 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta charset="utf-8">  
+<title>Insert title here</title>  
+</head>  
+<body>  
+  
+<h1>Add New product</h1>  
+<form action="AddProduct" method="post" enctype="multipart/form-data">  
+<table>  
+<tr><td>Name:</td><td><input type="text" name="name"/></td></tr>
+<tr><td>Name:</td><td><input type="file" name="image"/></td></tr>   
+    
+<tr><td colspan="2"><input type="submit" value="add pro"/></td></tr>  
+</table>  
+</form>   
+  
+<br/> 
+
+<h1> Customer Register</h1>  
+<form action="AddCustomer" method="post">  
+<table>  
+<tr><td>user name:</td><td><input type="text" name="username"/></td></tr>
+<tr><td>gender:</td><td><input type="text" name="gender"/></td></tr>
+<tr><td>preference:</td><td><input type="text" name="preference"/></td></tr>
+<tr><td>location:</td><td><input type="text" name="location"/></td></tr>
+<tr><td>email:</td><td><input type="text" name="email"/></td></tr>   
+    
+<tr><td colspan="2"><input type="submit" value="Join"/></td></tr>  
+</table>  
+</form> 
+ 
+<h1> AllocateStaff</h1>  
+<form action="AllocateStaff" method="post">  
+<table>  
+<tr><td>Enter long term staff No:</td><td><input type="number" name="logterm"/></td></tr>
+
+<tr><td colspan="2"><input type="submit" value="allocate"/></td></tr>  
+</table>  
+</form>
+
+<h1>Like product</h1>  
+<form action="LikeServlet" method="post">  
+<table>  
+<tr><td></td><td><input type="hidden" name="productid" value="3" /></td></tr>
+  
+<tr><td colspan="2"><input type="submit" value="Like"/></td></tr>  
+</table>  
+</form>
+
+<h1>Like product</h1>  
+<form action="AddSaleServlet" method="post">  
+<table>  
+<tr><td></td><td><input type="hidden" name="productid" value="3" /></td></tr>
+ <tr><td></td><td><input type="hidden" name="customerid" value="3" /></td></tr>
+ <tr><td></td><td><input type="hidden" name="created_at" value="2022-08-10 14:02:13" /></td></tr>
+ <tr><td></td><td><input type="hidden" name="updated_at" value="2022-08-10 14:02:13" /></td></tr>
+ 
+  
+<tr><td colspan="2"><input type="submit" value="Like"/></td></tr>  
+</table>  
+</form>
+
+
+ 
+<a href="AllocateStaff">AllocateStaff</a>
+<a href="Viewproducts">view</a>
+<a href="Disparture">Disparture</a>
+  
+</body>  
+</html> 
+
+
