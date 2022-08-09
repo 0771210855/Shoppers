@@ -1,5 +1,7 @@
 package Servlets;
 
+import DAO.StaffDAO;
+import Model.Staffs;
 import jakarta.servlet.http.HttpServlet;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,8 +12,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-import DAO.StaffDAO;
-import com.QuickyShoppers.Model.Staffs;
+
 
 /**
  * Servlet implementation class AllocateStaff
@@ -19,6 +20,9 @@ import com.QuickyShoppers.Model.Staffs;
 @WebServlet("/AllocateStaff")
 public class AllocateStaff extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+        
+        /**
+
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -64,17 +68,22 @@ public class AllocateStaff extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        
+        Staffs pro = new StaffDAO.Staffpick();
 
+       pro.getId();
+       pro.getLongterm();
+       pro.getMidterm();
+       pro.getShorterm();
+       pro.getCreated_at();
+       pro.getUpdated_at();
+       
+       request.setAttribute("ver",pro.getLongterm());
 		
-		String  ver= "my file";
-		
-		request.setAttribute("ver", ver);
 		
 		
-		
-        RequestDispatcher rd=request.getRequestDispatcher("/priductview.jsp");  
-        rd.include(request, response); 
-	}
-	
+        RequestDispatcher rd=request.getRequestDispatcher("/index.jsp");  
+        rd.include(request, response);
+      }
 
 }
