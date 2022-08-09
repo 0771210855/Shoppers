@@ -31,23 +31,18 @@
     </head>
     <body>
         <div class="regcontainer">
-            <form action="login.jsp" method="post" class="form">
-                <label>Full Name:</label><br/>
-                <input type="text" placeholder="Enter Full Name" name="Fname"><br>
-                
-                 <label>User Name:</label><br/>
-                <input type="text" placeholder="Enter User Name" name="Uname"><br>
-                
-                 <label>Email:</label><br/>
-                <input type="text" placeholder="Enter email" name="email"><br>
-                
-                 <label>Password:</label><br/>
-                <input type="text" placeholder="Enter password" name="psw"><br>
-                
-                 <label>Confirm Password:</label><br/>
-                <input type="text" placeholder="Re-enter password" name="cnfpsw"><br>
-                
-                <br><input type="submit" value="REGISTER"><br/>
+            <form action="reg" method="post">
+            <table>
+                <tr><td>User name:</td><td><input type="text" name="userName"/></td></tr>
+                <tr><td>Gender:</td><td><input type="radio" name="gender"value="male"/>Male</td><td><input type="radio" name="gender"value="female"/>Female</td></td></tr>
+                <tr><td>Preference:</td><td><input type="text" name="preference"/></td></tr>
+                <tr><td>Location:</td><td><input type="text" name="location"/></td></tr>
+                <tr><td>Email:</td><td><input type="text" name="email"/></td></tr>  
+                <tr><td>Password:</td><td><input type="password" name="password"></td></tr>
+    
+                <tr><td colspan="2"><input type="submit" value="Register"/></td></tr>  
+
+            </table>
             </form>
         </div>
     </body>
