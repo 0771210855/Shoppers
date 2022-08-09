@@ -2,6 +2,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page import="DAO.DBconnection" %>
+<%@ page import="Servlets.*" %>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
@@ -23,6 +24,7 @@ Statement statement = null;
 ResultSet resultSet = null;
 %>
 <!DOCTYPE html>
+
 <!--
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
@@ -50,6 +52,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                          <a href="#">HOME</a>
                      <a href="#">PRODUCTS</a>
                      <a href="#">CONTACTS</a>
+                     <a href="Shop/Dashboard/index.jsp">Dashboard</a>
+                     <a href="#"><%=request.getAttribute("midterm") %></a>
                      </div>
                     <div class="icons">
                         <a href="register.jsp">
@@ -121,17 +125,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 </div> -->
             </div>
         </div>
-        <script>
-            ******************jQuery***************
 
-$(window).scroll(function(){
-  var sticky = $('.sticky'),
-      scroll = $(window).scrollTop();
-
-  if (scroll >= 100) sticky.addClass('fixed');
-  else sticky.removeClass('fixed');
-});
-         </script>
-    
     </body>
 </html>

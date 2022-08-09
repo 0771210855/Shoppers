@@ -2,6 +2,9 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
+<%@page import="Servlets.AllocateStaff" %>
+<%@page import="Servlets.AllocateStaff" %>
+
 <%
 String id = request.getParameter("userid");
 String driver = "com.mysql.jdbc.Driver";
@@ -21,6 +24,7 @@ ResultSet resultSet = null;
 <!DOCTYPE html>
 <html>
 <body>
+    <%=request.getAttribute("midterm") %>
 
 <h1>Retrieve data from database in jsp</h1>
 <table border="1">
@@ -32,6 +36,7 @@ ResultSet resultSet = null;
 <%
 try{
 connection = DriverManager.getConnection(connectionUrl+database, userid, password);
+//Connection con = DBconnection.getConnection();
 statement=connection.createStatement();
 String sql ="select * from sales";
 resultSet = statement.executeQuery(sql);
