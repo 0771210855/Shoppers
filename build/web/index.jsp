@@ -1,194 +1,137 @@
-<%-- 
-    Document   : index
-    Created on : Aug 3, 2022, 9:04:15 PM
-    Author     : ADMIN
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import="DAO.DBconnection" %>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%
+String id = request.getParameter("userid");
+String driver = "com.mysql.jdbc.Driver";
+String connectionUrl = "jdbc:mysql://localhost:3306/";
+String database = "market";
+String userid = "root";
+String password = "";
+try {
+Class.forName(driver);
+} catch (ClassNotFoundException e) {
+e.printStackTrace();
+}
+Connection connection = null;
+Statement statement = null;
+ResultSet resultSet = null;
+%>
 <!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-         <link rel="stylesheet" href="./css/styles.css">
-        <title>Manager Panel</title>
-    </head>
-    <body>
-        <div class="side-menu">
-            <div class="brand-name">
-                <h1>Quicky Shoppers</h1>
-            </div>
-            <ul>
-                <li><img src="./image/dashboard (2).png" alt="">&nbsp;<span>Dashboard</span></li>
-                <li><img src="./image/info.png" alt="">&nbsp;<span>Products</span></li>
-                <li><img src="./image/reading-book(1).png" alt="">&nbsp;<span>Allocate</span></li>
-                <li><img src="./image/teacher2.png" alt="">&nbsp;<span>Staff</span></li>
-                <li><img src="./image/payement.png" alt="">&nbsp;<span>Sales</span></li>
-                <li><img src="./image/payement.png" alt="">&nbsp;<span>Likes</span></li>
-                <li><img src="./image/payement.png" alt="">&nbsp;<span>Line of product</span></li>
-                <li><img src="./image/payement.png" alt="">&nbsp;<span>Reports</span></li>
-            </ul>
-        </div>
-        <div class="container">
-            <div class="header">
-                <div class="nav">
-                    <div class="search">
-                        <input type="text" placeholder="Search...">
-                        <button type="submit"><img src="./image/search.png" alt=""></button>
-                    </div>
-                    <div class="user">
-                        <a href="#" class="btn">Add New</a>
-                        <img src="" alt="">
-                        <div class="img-case">
-                            <img src="" alt=""/>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-             <div class="content">
-            <div class="cards">
-                <div class="card">
-                    <div class="box">
-                        <h1></h1>
-                        <h3>Products</h3>
-                    </div>
-                    <div class="icon-case">
-                        <img src="./image/info.png" alt="">
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <h1>53</h1>
-                        <h3>Staff</h3>
-                    </div>
-                    <div class="icon-case">
-                        <img src="./image/teachers.png" alt="">
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <h1>53</h1>
-                        <h3>Likes</h3>
-                    </div>
-                    <div class="icon-case">
-                        <img src="./image/teachers.png" alt="">
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <h1>53</h1>
-                        <h3>Sales</h3>
-                    </div>
-                    <div class="icon-case">
-                        <img src="./image/teachers.png" alt="">
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <h1>5</h1>
-                        <h3>Long run Staff</h3>
-                    </div>
-                    <div class="icon-case">
-                        <img src="./image/schools.png" alt="">
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <h1>35000</h1>
-                        <h3>Sales</h3>
-                    </div>
-                    <div class="icon-case">
-                        <img src="./image/income.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="content-2">
-                <div class="recent-payments">
-                    <div class="title">
-                        <h2>Charts</h2>
-                        <a href="#" class="btn">View All</a>
-                    </div>
-                    <table>
-                        <tr>
-                            <th>customer</th>
-                            <th>product</th>
-                            <th>Amount</th>
-                            <th>location</th>
-                        </tr>
-                        <tr>
-                            <td>John Do</td>
-                            <td>St. James College</td>
-                            <td>$120</td>
-                            <td><a href="#" class="btn">View</a></td>
-                        </tr>
-                        <tr>
-                            <td>John Doe</td>
-                            <td>St. James College</td>
-                            <td>$120</td>
-                            <td><a href="#" class="btn">View</a></td>
-                        </tr>
-                        <tr>
-                            <td>John Doe</td>
-                            <td>St. James College</td>
-                            <td>$120</td>
-                            <td><a href="#" class="btn">View</a></td>
-                        </tr>
-                        <tr>
-                            <td>John Doe</td>
-                            <td>St. James College</td>
-                            <td>$120</td>
-                            <td><a href="#" class="btn">View</a></td>
-                        </tr>
-                        <tr>
-                            <td>John Doe</td>
-                            <td>St. James College</td>
-                            <td>$120</td>
-                            <td><a href="#" class="btn">View</a></td>
-                        </tr>
-                        <tr>
-                            <td>John Doe</td>
-                            <td>St. James College</td>
-                            <td>$120</td>
-                            <td><a href="#" class="btn">View</a></td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="new-students">
-                    <div class="title">
-                        <h2>New Products</h2>
-                        <a href="#" class="btn">View All</a>
-                    </div>
-                    <table>
-                        <tr>
-                            <th>Profile</th>
-                            <th>Name</th>
-                            <th>option</th>
-                        </tr>
-                        <tr>
-                            <td><img src="user.png" alt=""></td>
-                            <td>John Steve Doe</td>
-                            <td><img src="'./image/info.png" alt=""></td>
-                        </tr>
-                        <tr>
-                            <td><img src="user.png" alt=""></td>
-                            <td>John Steve Doe</td>
-                            <td><img src="info.png" alt=""></td>
-                        </tr>
-                        <tr>
-                            <td><img src="user.png" alt=""></td>
-                            <td>John Steve Doe</td>
-                            <td><img src="info.png" alt=""></td>
-                        </tr>
-                        <tr>
-                            <td><img src="user.png" alt=""></td>
-                            <td>John Steve Doe</td>
-                            <td><img src="info.png" alt=""></td>
-                        </tr>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./Shop/assets/css/frontStyle.css">
+        
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 
-                    </table>
+    </head>
+    
+    <body>
+         <div class="container">
+             <nav>
+                 <div class="nav-bar">
+                     <div class="logo">
+                         <img src="src" width="80" height="90" alt="alt"/>
+                     </div>
+                     <div class="menu" >
+                         <a href="#">HOME</a>
+                     <a href="#">PRODUCTS</a>
+                     <a href="#">CONTACTS</a>
+                     </div>
+                    <div class="icons">
+                        <a href="register.jsp">
+                            <i class="far fa-heart" aria-hidden="true" aria-hidden="true"><div class="cart-no"><span>4</span></div></i>
+                        </a>
+                        <a href="register.jsp">
+                            <i class="fa fa-cart-arrow-down" aria-hidden="true"><div class="cart-no">0</div></i>
+                        </a>
+                    </div>
+                   
                 </div>
+            </nav>
+         </div>
+        <div class="wrapper">
+            
+           
+            <div class="project">
+                <div class="shop">
+                <%
+                try{
+                connection = DriverManager.getConnection(connectionUrl+database, userid, password);
+                statement=connection.createStatement();
+                String sql ="SELECT p.id,p.image,p.price,p.productName,p.quantity, COUNT(l.productId) as liknum FROM products p LEFT JOIN Likes l ON l.productId = p.id GROUP BY p.id";
+                resultSet = statement.executeQuery(sql);
+                while(resultSet.next()){
+                %>
+                
+                    <div class="box">
+                        <img src="image/blueBag.jpg" alt="" style="width:20%">
+                            <div class="content">
+                                <h3><%=resultSet.getString("productName") %></h3>
+                                <h4>Price:$<%=resultSet.getString("price") %></h4>
+                                <h4>Likes <%=resultSet.getString("liknum") %></h4>
+                                
+                                <p class="unit" >Quantity:<%=resultSet.getString("quantity") %> <!-- <input value="2">--> </p>
+                                <p class="btn-area">
+                                    <%
+                                        String proid =resultSet.getString("id");
+                                        
+                                    %>
+                                    
+                                    <a href="LikeServlet?id=<%=proid%>"> <i class="fa fa-thumbs-up"></i></a>
+                                    
+                                    <span class="btn2">Add to cart</span> <input type="button" value="Buy now">
+
+                                </p>
+                            </div>
+                    </div>
+                    <%
+                    }
+                    connection.close();
+                    } catch (Exception e) {
+                    e.printStackTrace();
+                    }
+                    %>
+                   
+                </div>
+
+              <!--  <div class="right-bar">
+                    <p><span>Subtotal:</span> <span>$120</span></p>
+                    <hr>
+                    <p><span></span>Tax(5%)<span>$6 </span></p>
+                    <hr>
+                    <p><span>Shipping</span> <span>$10</span></p>
+                    <hr>
+                    <p><span>total</span> <span>$151</span></p>
+
+                    <a href="#"><i class="fa fa-shopping-cart"></i>Checkout</a>
+                </div> -->
             </div>
         </div>
-    </div>
+        <script>
+            ******************jQuery***************
+
+$(window).scroll(function(){
+  var sticky = $('.sticky'),
+      scroll = $(window).scrollTop();
+
+  if (scroll >= 100) sticky.addClass('fixed');
+  else sticky.removeClass('fixed');
+});
+         </script>
+    
     </body>
 </html>

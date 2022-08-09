@@ -1,9 +1,9 @@
 package DAO;
 
+import Model.Staffs;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-
-import com.QuickyShoppers.Model.Staffs;
+import java.sql.ResultSet;
 
 public class StaffDAO {
     public static int save(Staffs s){  
@@ -26,5 +26,30 @@ public class StaffDAO {
           
         return status;  
     }
+  
+    
+      
+        public static Staffs Staffpick(int id){  
+        Staffs e=new Staffs();  
+          
+        try{  
+            Connection con=DBconnection.getConnection();  
+            PreparedStatement ps=con.prepareStatement("select * staffallocations where id=?");  
+            ps.setInt(1,id);  
+            ResultSet rs=ps.executeQuery();  
+            if(rs.next()){  
+                e.setId(rs.getInt(1));  
+                e.setLongterm(rs.getInt(2));  
+                e.setMidterm(rs.getInt(3));  
+                e.setShorterm(rs.getInt(4));  
+                e.setCreated_at(rs.getString(5)); 
+                e.setUpdated_at(rs.getString(5));
+            }  
+            con.close();  
+        }catch(Exception ex){ex.printStackTrace();}  
+          
+        return e;  
+    }
+
 
 }

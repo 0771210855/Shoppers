@@ -1,4 +1,4 @@
-package com.QuickyShoppers.Model;
+package Model;
 
 public class Staffs {
 	public int id;

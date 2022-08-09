@@ -1,4 +1,4 @@
-package com.QuickyShoppers.Servlets;
+package Servlets;
 
 import jakarta.servlet.http.HttpServlet;
 import java.io.IOException;
@@ -22,11 +22,12 @@ public class LikeServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		 response.setContentType("text/html");  
-	        PrintWriter out=response.getWriter();  
+	        PrintWriter out=response.getWriter();
+                
 	          
-	      int productId = Integer.parseInt(request.getParameter("productid"));
+	     int productId = Integer.parseInt(request.getParameter("id"));
 	      
 	       Likes l=new Likes();  
 	        l.setProductId(productId);
@@ -35,8 +36,8 @@ public class LikeServlet extends HttpServlet {
 	          
 	        int status = LikesDAO.save(l);  
 	        if(status>0){  
-	            out.print("<p>Record saved successfully!</p>");  
-	            request.getRequestDispatcher("index.html").include(request, response);  
+	              
+	            request.getRequestDispatcher("index.jsp").include(request, response);  
 	        }else{  
 	            out.println("Sorry! unable to save record");  
 	        }  
