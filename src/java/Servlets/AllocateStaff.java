@@ -67,9 +67,10 @@ public class AllocateStaff extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+        @Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         
-        Staffs pro = new StaffDAO.Staffpick();
+        Staffs pro = StaffDAO.Staffpick();
 
        pro.getId();
        pro.getLongterm();
