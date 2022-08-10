@@ -92,12 +92,15 @@ public class AllocateStaff extends HttpServlet {
        request.setAttribute("longterm",pro.getShorterm());
        request.setAttribute("shortterm",pro.getId());
        
-       System.out.println(pro.getShorterm());
+//       request.setAttribute("val","myu thhgj");
+       
+//       System.out.println(pro.getShorterm());
+        response.sendRedirect( "./Shop/Dashboard/StaffAllocation.jsp?long="+pro.getLongterm()+"&short="+pro.getShorterm()+"&mid="+pro.getMidterm()+"");
 		
 		
-		
-        RequestDispatcher rd=request.getRequestDispatcher("/Shop/test.jsp");  
-        rd.include(request, response);
+//		
+//        RequestDispatcher rd=request.getRequestDispatcher("./Shop/Dashboard/StaffAllocation.jsp");  
+//        rd.forward(request, response);
       }
 
 }

@@ -5,22 +5,7 @@
 <%@page import="Servlets.AllocateStaff" %>
 <%@page import="Servlets.AllocateStaff" %>
 
-<%
-String id = request.getParameter("userid");
-String driver = "com.mysql.jdbc.Driver";
-String connectionUrl = "jdbc:mysql://localhost:3306/";
-String database = "market";
-String userid = "root";
-String password = "";
-try {
-Class.forName(driver);
-} catch (ClassNotFoundException e) {
-e.printStackTrace();
-}
-Connection connection = null;
-Statement statement = null;
-ResultSet resultSet = null;
-%>
+
 <!DOCTYPE html>
 <html>
 <body>

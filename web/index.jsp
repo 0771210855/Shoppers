@@ -7,22 +7,7 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
-<%
-String id = request.getParameter("userid");
-String driver = "com.mysql.jdbc.Driver";
-String connectionUrl = "jdbc:mysql://localhost:3306/";
-String database = "market";
-String userid = "root";
-String password = "";
-try {
-Class.forName(driver);
-} catch (ClassNotFoundException e) {
-e.printStackTrace();
-}
-Connection connection = null;
-Statement statement = null;
-ResultSet resultSet = null;
-%>
+<%@ include file="connection.jsp" %>
 <!DOCTYPE html>
 
 <!--
@@ -51,9 +36,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                      <div class="menu" >
                          <a href="#">HOME</a>
                      <a href="#">PRODUCTS</a>
-                     <a href="#">CONTACTS</a>
+                     <a href="#">CONTACTS <%= request.getAttribute("val") %></a>
                      <a href="Shop/Dashboard/index.jsp">Dashboard</a>
-                     <a href="#"><%=request.getAttribute("midterm") %></a>
+                     <a href="./AllocateStaff">rest</a>
                      </div>
                     <div class="icons">
                         <a href="register.jsp">

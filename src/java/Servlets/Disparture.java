@@ -33,19 +33,19 @@ public class Disparture extends HttpServlet {
        pro.getId();
        pro.getProductName();
 
-//		/String  ver= "my file";
+		String  ver= "my file";
 		
-		request.setAttribute("ver", pro.getProductName());
+		request.setAttribute("ver", ver);
 		
 		
 		
-        RequestDispatcher rd=request.getRequestDispatcher("/priductview.jsp");  
+        RequestDispatcher rd=request.getRequestDispatcher("/test.jsp");  
         rd.include(request, response);
         
         List<Sales> list= SalesDAO.getAllSales(); 
         
 		request.setAttribute("test", SalesDAO.getAllSales());
-        RequestDispatcher res=request.getRequestDispatcher("/Test.jsp");  
+        RequestDispatcher res=request.getRequestDispatcher("test.jsp");  
         res.include(request, response);
         
         

@@ -34,7 +34,7 @@ public class StaffDAO {
           
         try{  
             try (Connection con = DBconnection.getConnection()) {
-                PreparedStatement ps=con.prepareStatement("select * from staffallocations where id=6");
+                PreparedStatement ps=con.prepareStatement("SELECT * FROM staffallocations ORDER BY id ASC LIMIT 1");
                 
                 ResultSet rs=ps.executeQuery();
                 if(rs.next()){
