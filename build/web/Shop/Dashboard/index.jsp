@@ -20,7 +20,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
         <link rel="stylesheet" href="../assets/css/styles.css">
+
         <title>Manager Panel</title>
     </head>
 
@@ -158,6 +160,140 @@
                         </div>
                     </div>
                 </div>
+<<<<<<< HEAD
+=======
+                <div class="card">
+                    <div class="box">
+                        <h1>53</h1>
+                        <h3>Staff</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="./image/teachers.png" alt="">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>53</h1>
+                        <h3>Likes</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="./image/teachers.png" alt="">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>53</h1>
+                        <h3>Sales</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="./image/teachers.png" alt="">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>5</h1>
+                        <h3>Long run Staff</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="./image/schools.png" alt="">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>35000</h1>
+                        <h3>Sales</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="./image/income.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="content-2">
+                <div class="recent-payments">
+                    <div class="title">
+                        <h2>Charts</h2>
+                        <a href="#" class="btn">View All</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>customer</th>
+                            <th>product</th>
+                            <th>Amount</th>
+                            <th>location</th>
+                        </tr>
+                        <tr>
+                            <td>John Do</td>
+                            <td>St. James College</td>
+                            <td>$120</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>St. James College</td>
+                            <td>$120</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>St. James College</td>
+                            <td>$120</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>St. James College</td>
+                            <td>$120</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>St. James College</td>
+                            <td>$120</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>St. James College</td>
+                            <td>$120</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="new-students">
+                    <div class="title">
+                        <h2>New Products</h2>
+                        <a href="#" class="btn">View All</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Profile</th>
+                            <th>Name</th>
+                            <th>option</th>
+                        </tr>
+                        <tr>
+                            <td><img src="user.png" alt=""></td>
+                            <td>John Steve Doe</td>
+                            <td><img src="'./image/info.png" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td><img src="user.png" alt=""></td>
+                            <td>John Steve Doe</td>
+                            <td><img src="info.png" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td><img src="user.png" alt=""></td>
+                            <td>John Steve Doe</td>
+                            <td><img src="info.png" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td><img src="user.png" alt=""></td>
+                            <td>John Steve Doe</td>
+                            <td><img src="info.png" alt=""></td>
+                        </tr>
+
+                    </table>
+                </div>
+>>>>>>> parent of e04169e (stash 2)
             </div>
         </div>
         <script src="./js/chart.min.js"></script>

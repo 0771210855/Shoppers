@@ -2,14 +2,12 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page import="DAO.DBconnection" %>
-<%@ page import="Servlets.*" %>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%@ include file="connection.jsp" %>
 <!DOCTYPE html>
-
 <!--
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
@@ -36,18 +34,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                      <div class="menu" >
                          <a href="#">HOME</a>
                      <a href="#">PRODUCTS</a>
-                     <a href="#">CONTACTS <%= request.getAttribute("val") %></a>
-                     <a href="Shop/Dashboard/index.jsp">Dashboard</a>
-                     <a href="./AllocateStaff">rest</a>
+             <a href="#">CONTACTS</a>
                      </div>
-                    <div class="icons">
-                        <a href="register.jsp">
-                            <i class="far fa-heart" aria-hidden="true" aria-hidden="true"><div class="cart-no"><span>4</span></div></i>
-                        </a>
-                        <a href="register.jsp">
-                            <i class="fa fa-cart-arrow-down" aria-hidden="true"><div class="cart-no">0</div></i>
-                        </a>
-                    </div>
+                    
                    
                 </div>
             </nav>
@@ -110,6 +99,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 </div> -->
             </div>
         </div>
+        <script>
+            ******************jQuery***************
 
+$(window).scroll(function(){
+  var sticky = $('.sticky'),
+      scroll = $(window).scrollTop();
+
+  if (scroll >= 100) sticky.addClass('fixed');
+  else sticky.removeClass('fixed');
+});
+         </script>
+    
     </body>
 </html>

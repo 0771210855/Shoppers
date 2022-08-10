@@ -10,18 +10,19 @@ public class StaffDAO {
     public static int save(Staffs s){  
         int status=0;  
         try{  
-            try (Connection con = DBconnection.getConnection()) {
-                PreparedStatement ps=con.prepareStatement(
-                        "insert into staffallocations(longTerm,midTerm,shortTerm,created_at,updated_at) values (?,?,?,now(),now())");
-                ps.setInt(1,s.getLongterm());
-                ps.setInt(2,s.getMidterm());
-                ps.setInt(3,s.getShorterm());
-//                ps.setString(4,s.getCreated_at());
-//                ps.setString(5,s.getUpdated_at());
-                
-                
-                status=ps.executeUpdate();
-            }  
+            Connection con=DBconnection.getConnection();  
+            PreparedStatement ps=con.prepareStatement(  
+                         "insert into staffallocations(longTerm,midTerm,shortTerm,created_at,updated_at) values (?,?,?,?,?)");  
+            ps.setInt(1,s.getLongterm());
+            ps.setInt(2,s.getMidterm());
+            ps.setInt(3,s.getShorterm());
+            ps.setString(4,s.getCreated_at());
+            ps.setString(5,s.getUpdated_at());
+
+            
+            status=ps.executeUpdate();  
+              
+            con.close();  
         }catch(SQLException ex){}  
           
         return status;  
@@ -29,10 +30,11 @@ public class StaffDAO {
   
     
       
-        public static Staffs Staffpick(){  
+        public static Staffs Staffpick(int id){  
         Staffs e=new Staffs();  
           
         try{  
+
             try (Connection con = DBconnection.getConnection()) {
                 PreparedStatement ps=con.prepareStatement("SELECT * FROM staffallocations ORDER BY id ASC LIMIT 1");
                 
@@ -45,7 +47,9 @@ public class StaffDAO {
                     e.setCreated_at(rs.getString(5));
                     e.setUpdated_at(rs.getString(5));
                 }
+
             }  
+            con.close();  
         }catch(SQLException ex){}  
           
         return e;  

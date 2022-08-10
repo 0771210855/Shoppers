@@ -57,7 +57,7 @@
                 <div class="cards">
                     <div class="card">
                         <div class="box">
-                            <h1><%= request.getParameter("long") %></h1>
+                            <h1>17</h1>
                             <h3>Long term Staff</h3>
                         </div>
                         <div class="icon-case">
@@ -66,7 +66,7 @@
                     </div>
                     <div class="card">
                         <div class="box">
-                            <h1><%= request.getParameter("mid") %></h1> 
+                            <h1>8</h1> 
                             <h3>Mid term Staff</h3>
                         </div>
                         <div class="icon-case">
@@ -75,7 +75,7 @@
                     </div>
                     <div class="card">
                         <div class="box">
-                            <h1><%= request.getParameter("short") %></h1> 
+                            <h1>1</h1> 
 
                             <h3>Short term Staff</h3>
                         </div>
