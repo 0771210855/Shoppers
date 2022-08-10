@@ -1,4 +1,4 @@
-var ctx2 = document.getElementById('doughnut').getContext('2d');
+var ctx2 = document.getElementById('pie').getContext('2d');
 var myChart2 = new Chart(ctx2, {
     type: 'pie',
     data: {
@@ -28,6 +28,6 @@ var myChart2 = new Chart(ctx2, {
     options: {
         responsive: true,
         indexAxis: 'y',
-    
+       maxAspectRatio:false,
     }
 });

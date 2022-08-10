@@ -1,4 +1,4 @@
-var ctx = document.getElementById("r3").getContext("2d");
+var ctx = document.getElementById("pie").getContext("2d");
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {

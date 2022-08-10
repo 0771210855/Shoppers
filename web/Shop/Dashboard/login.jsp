@@ -3,7 +3,7 @@
     Created on : Aug 3, 2022, 9:04:39 PM
     Author     : ADMIN
 --%>
-
+       
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -34,7 +34,7 @@
         </style>
     </head>
     <body>
-        <img src="./image/Online-Shopping.jpg" alt="" width="100%" height="100%"/>
+        <img src="./image/Online-Shopping.jpg" alt=""/>
     <center><h1><u>Login Here</u></h1></center>
     <center>
         <div>
