@@ -61,7 +61,7 @@ td {
 
 .side-menu {
     position: fixed;
-    background: #f05462;
+    background: gray;
     width: 20vw;
     min-height: 100vh;
     display: flex;

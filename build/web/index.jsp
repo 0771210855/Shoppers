@@ -10,7 +10,7 @@
 String id = request.getParameter("userid");
 String driver = "com.mysql.jdbc.Driver";
 String connectionUrl = "jdbc:mysql://localhost:3306/";
-String database = "market";
+String database = "quickyshoppers";
 String userid = "root";
 String password = "";
 try {
@@ -50,7 +50,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                          <a href="#">HOME</a>
                      <a href="#">PRODUCTS</a>
                      <a href="#">CONTACTS</a>
+                     <a href="./Shop/Dashboard/register.jsp">REGISTER</a>
+                     <a href="./Shop/Dashboard/customerlogin.jsp">LOG-IN</a>
+                   
                      </div>
+                     
                     <div class="icons">
                         <a href="register.jsp">
                             <i class="far fa-heart" aria-hidden="true" aria-hidden="true"><div class="cart-no"><span>4</span></div></i>

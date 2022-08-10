@@ -31,7 +31,7 @@
     </head>
     <body>
         <div class="regcontainer">
-            <form action="reg" method="post">
+            <form action="../../reg" method="post">
             <table>
                 <tr><td>User name:</td><td><input type="text" name="userName"/></td></tr>
                 <tr><td>Gender:</td><td><input type="radio" name="gender"value="male"/>Male</td><td><input type="radio" name="gender"value="female"/>Female</td></td></tr>
