@@ -1,1 +1,0 @@
-com.QuickyShoppers.Model.Sales
